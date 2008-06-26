@@ -39,4 +39,8 @@ describe ScopeBuilder::Builder do
   it "should not include instance variables on inspect so it doesn't load proxy" do
     @builder.inspect.should_not include('proxy_scope')
   end
+  
+  it "should respond to enumerable methods like each_with_index" do
+    @builder.should respond_to(:each_with_index)
+  end
 end

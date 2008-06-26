@@ -14,6 +14,10 @@ module ScopeBuilder
       end
     end
     
+    def respond_to?(method)
+      super || @proxy_scope.respond_to?(method)
+    end
+    
     def inspect
       sprintf("#<%s:%#0x>", self.class.to_s, self.object_id)
     end
