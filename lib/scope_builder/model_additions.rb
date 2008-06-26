@@ -1,7 +1,9 @@
 module ScopeBuilder
   module ModelAdditions
     def scope_builder
-      Builder.new(scoped({}))
+      builder = Builder.new(scoped({}))
+      yield(builder) if block_given?
+      builder
     end
   end
 end

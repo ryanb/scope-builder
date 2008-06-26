@@ -43,4 +43,8 @@ describe ScopeBuilder::Builder do
   it "should respond to enumerable methods like each_with_index" do
     @builder.should respond_to(:each_with_index)
   end
+  
+  it "should be able to build up scope in block" do
+    Product.scope_builder { |b| b.released }.all.should == Product.released.all
+  end
 end
