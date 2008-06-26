@@ -1,7 +1,7 @@
 module ScopeBuilder
   module ModelAdditions
     def scope_builder
-      Builder.new(self, {})
+      Builder.new(scoped({}))
     end
   end
 end
