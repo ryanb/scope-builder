@@ -18,13 +18,18 @@ Rails 2.1 or later required.
 
 == Usage
 
-This gem adds the scope_builder method to all Active Record models. A builder behaves exactly like any other named scope except that calling other named scopes on it will alter the builder itself rather than returning a new named scope.
+This gem adds the scope_builder method to all Active Record models. A 
+builder behaves exactly like any other named scope except that calling 
+other named scopes on it will alter the builder itself rather than 
+returning a new named scope.
 
   builder = Product.scope_builder
   builder.released.visible # call a couple named scopes to change builder
   builder.cheap if only_show_cheap_products? # build scopes conditionally
 
-The scope_builder method can also take a block which will return the builder. This is useful when you are using the builder in a model search method.
+The scope_builder method can also take a block which will return the 
+builder. This is useful when you are using the builder in a model 
+search method.
 
   # in product model
   def self.search(options)
@@ -33,6 +38,18 @@ The scope_builder method can also take a block which will return the builder. Th
       builder.cheap if options[:cheap]
     end
   end
+
+
+== Running Tests
+
+To run the tests (specs), you first need to run the spec/prepare.rb 
+script.
+
+  ruby spec/prepare.rb
+
+Then you can run rake spec or autotest
+
+  rake spec
 
 
 == Development
