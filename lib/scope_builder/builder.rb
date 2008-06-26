@@ -1,5 +1,4 @@
 module ScopeBuilder
-  class Builder
-    
+  class Builder < ActiveRecord::NamedScope::Scope
   end
 end
