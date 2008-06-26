@@ -40,18 +40,6 @@ search method.
   end
 
 
-== Running Tests
-
-To run the tests (specs), you first need to run the spec/prepare.rb 
-script.
-
-  ruby spec/prepare.rb
-
-Then you can run rake spec or autotest
-
-  rake spec
-
-
 == Development
 
 This project can be found on github at the following URL.

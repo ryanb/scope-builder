@@ -10,9 +10,10 @@ ActiveRecord::Base.establish_connection({
   :dbfile => File.dirname(__FILE__) + "/test.sqlite3" 
 })
 
-class Product < ActiveRecord::Base
-  named_scope :released, :conditions => ['released=?', true]
-end
+# load models
+# there's probably a better way to handle this
+require File.dirname(__FILE__) + '/models/product.rb'
+CreateProducts.migrate(:up) unless Product.table_exists?
 
 Spec::Runner.configure do |config|
   config.mock_with :mocha

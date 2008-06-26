@@ -1,7 +1,8 @@
-require File.dirname(__FILE__) + '/spec_helper'
+class Product < ActiveRecord::Base
+  named_scope :released, :conditions => ['released=?', true]
+end
 
-# define a migration
-class CreateTasks < ActiveRecord::Migration
+class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
       t.string :name
@@ -13,6 +14,3 @@ class CreateTasks < ActiveRecord::Migration
     drop_table :products
   end
 end
-
-# run the migration
-CreateTasks.migrate(:up)
