@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.date = %q{2008-06-26}
   s.description = %q{Build up named scopes conditionally.}
   s.email = %q{ryan (at) railscasts (dot) com}
-  s.extra_rdoc_files = ["CHANGELOG", "lib/scope_builder/builder.rb", "lib/scope_builder/model_additions.rb", "lib/scope_builder.rb", "LICENSE", "README", "tasks/deployment.rake", "tasks/spec.rake", "TODO"]
-  s.files = ["CHANGELOG", "lib/scope_builder/builder.rb", "lib/scope_builder/model_additions.rb", "lib/scope_builder.rb", "LICENSE", "Manifest", "README", "spec/models/product.rb", "spec/scope_builder/builder_spec.rb", "spec/spec_helper.rb", "spec/test.sqlite3", "tasks/deployment.rake", "tasks/spec.rake", "TODO", "scope-builder.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "lib/scope_builder/builder.rb", "lib/scope_builder/model_additions.rb", "lib/scope_builder/scope_additions.rb", "lib/scope_builder.rb", "LICENSE", "README", "tasks/deployment.rake", "tasks/spec.rake", "TODO"]
+  s.files = ["CHANGELOG", "lib/scope_builder/builder.rb", "lib/scope_builder/model_additions.rb", "lib/scope_builder/scope_additions.rb", "lib/scope_builder.rb", "LICENSE", "Manifest", "README", "scope-builder.gemspec", "spec/models/product.rb", "spec/scope_builder/builder_spec.rb", "spec/spec_helper.rb", "spec/test.sqlite3", "tasks/deployment.rake", "tasks/spec.rake", "TODO"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/ryanb/scope-builder}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Scope-builder", "--main", "README"]
