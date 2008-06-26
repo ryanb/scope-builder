@@ -1,0 +1,45 @@
+= Scope Builder
+
+Build up named scopes conditionally.
+
+
+== Install
+
+First install the gem.
+
+  gem install ryanb-scope-builder --source=http://gems.github.com
+
+Then specify it in your Rails config.
+
+	config.gem 'ryanb-scope-builder', :lib => 'scope_builder', :source => 'http://gems.github.com'
+
+Rails 2.1 or later required.
+
+
+== Usage
+
+This gem adds the scope_builder method to all Active Record models. A builder behaves exactly like any other named scope except that calling other named scopes on it will alter the builder itself rather than returning a new named scope.
+
+  builder = Product.scope_builder
+  builder.released.visible # call a couple named scopes to change builder
+  builder.cheap if only_show_cheap_products? # build scopes conditionally
+
+The scope_builder method can also take a block which will return the builder. This is useful when you are using the builder in a model search method.
+
+  # in product model
+  def search(options)
+    scope_builder do |builder|
+      builder.released.visible
+      builder.cheap if options[:cheap]
+    end
+  end
+
+
+== Development
+
+This project can be found on github at the following URL.
+
+http://github.com/ryanb/scope-builder/
+
+If you would like to contribute to this project, please fork the 
+repository and send me a pull request.

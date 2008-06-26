@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# File: script/console
+irb = RUBY_PLATFORM =~ /(:?mswin|mingw)/ ? 'irb.bat' : 'irb'
+
+puts "Loading scope-builder gem"
+exec "#{irb} -r irb/completion -r #{File.dirname(__FILE__) + '/../lib/scope_builder.rb'} --simple-prompt"
