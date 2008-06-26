@@ -13,5 +13,9 @@ module ScopeBuilder
         result
       end
     end
+    
+    def inspect
+      sprintf("#<%s:%#0x>", self.class.to_s, self.object_id)
+    end
   end
 end

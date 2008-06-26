@@ -35,4 +35,8 @@ describe ScopeBuilder::Builder do
       product.should == products[index]
     end
   end
+  
+  it "should not include instance variables on inspect so it doesn't load proxy" do
+    @builder.inspect.should_not include('proxy_scope')
+  end
 end
