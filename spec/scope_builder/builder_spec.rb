@@ -47,4 +47,9 @@ describe ScopeBuilder::Builder do
   it "should be able to build up scope in block" do
     Product.scope_builder { |b| b.released }.all.should == Product.released.all
   end
+  
+  it "should be able to call scope builder on an existing scope" do
+    builder = Product.released.scope_builder
+    builder.all.should == Product.released.all
+  end
 end

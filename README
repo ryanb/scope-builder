@@ -5,10 +5,6 @@ Build up named scopes conditionally.
 
 == Install
 
-First install the gem.
-
-  gem install ryanb-scope-builder --source=http://gems.github.com
-
 Then specify it in your Rails config.
 
 	config.gem 'ryanb-scope-builder', :lib => 'scope_builder', :source => 'http://gems.github.com'
@@ -38,6 +34,12 @@ search method.
       builder.cheap if options[:cheap]
     end
   end
+
+The scope_builder method can also be called on an existing scope.
+
+  products = Product.released.visible
+  builder = products.scope_builder
+  builder.cheap
 
 
 == Development
