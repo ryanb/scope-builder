@@ -27,7 +27,7 @@ This gem adds the scope_builder method to all Active Record models. A builder be
 The scope_builder method can also take a block which will return the builder. This is useful when you are using the builder in a model search method.
 
   # in product model
-  def search(options)
+  def self.search(options)
     scope_builder do |builder|
       builder.released.visible
       builder.cheap if options[:cheap]
