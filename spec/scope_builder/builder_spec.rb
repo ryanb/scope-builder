@@ -1,9 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class Product < ActiveRecord::Base
-  named_scope :released, :conditions => ['released=?', true]
-end
-
 describe ScopeBuilder::Builder do
   before(:each) do
     Product.delete_all
