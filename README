@@ -5,9 +5,13 @@ Build up named scopes conditionally.
 
 == Install
 
-Then specify it in your Rails config.
+First specify it in your Rails config.
 
 	config.gem 'ryanb-scope-builder', :lib => 'scope_builder', :source => 'http://gems.github.com'
+
+And then install it.
+
+  rake gems:install
 
 Rails 2.1 or later required.
 
