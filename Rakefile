@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'echoe'
 
-  Echoe.new('scope-builder', '0.1.0') do |p|
+  Echoe.new('scope-builder', '0.1.1') do |p|
     p.summary        = "Build up named scopes conditionally."
     p.description    = "Build up named scopes conditionally."
     p.url            = "http://github.com/ryanb/scope-builder"

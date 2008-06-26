@@ -1,10 +1,12 @@
 CHANGELOG
 lib/scope_builder/builder.rb
 lib/scope_builder/model_additions.rb
+lib/scope_builder/scope_additions.rb
 lib/scope_builder.rb
 LICENSE
 Manifest
 README
+scope-builder.gemspec
 spec/models/product.rb
 spec/scope_builder/builder_spec.rb
 spec/spec_helper.rb

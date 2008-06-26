@@ -43,7 +43,7 @@ The scope_builder method can also be called on an existing scope.
 
   products = Product.released.visible
   builder = products.scope_builder
-  builder.cheap
+  builder.cheap if only_show_cheap_products?
 
 
 == Development
