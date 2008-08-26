@@ -52,4 +52,16 @@ describe ScopeBuilder::Builder do
     builder = Product.released.scope_builder
     builder.all.should == Product.released.all
   end
+  
+  describe "products in category" do
+    before(:each) do
+      Category.delete_all
+      @category = Category.create!(:products => Product.find_all_by_name(['a', 'b']))
+    end
+    
+    it "should work on named scope through association" do
+      builder = @category.products.released.scope_builder
+      builder.all.should == @category.products.released.all
+    end
+  end
 end
