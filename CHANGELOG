@@ -1,3 +1,7 @@
+*0.1.2* (August 28th, 2008)
+
+* scope_builder can be called on association proxy
+
 *0.1.1* (June 26th, 2008)
 
 * scope_builder can be called on any Scope
