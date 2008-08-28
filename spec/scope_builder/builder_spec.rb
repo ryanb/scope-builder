@@ -63,5 +63,11 @@ describe ScopeBuilder::Builder do
       builder = @category.products.released.scope_builder
       builder.all.should == @category.products.released.all
     end
+    
+    it "should work directly on assocation" do
+      builder = @category.products.scope_builder
+      builder.released
+      builder.all.should == @category.products.released.all
+    end
   end
 end
